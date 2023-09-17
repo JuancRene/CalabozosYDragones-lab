@@ -24,15 +24,13 @@ namespace CalabozosYDragones_lab.Clases
 
         public int AvanceDragon1()
         {
-            
                 posicionA = base.Posicion;
                 posicionA += 5;
                 c = (posicionA % 10) * 90;
                 f = (posicionA / 10) * 90;
                 MessageBox.Show("Aumenta 5 lugares");
                 return posicionA;
-  
-          
+              
         }
         public int AvanceDragon2()
         {

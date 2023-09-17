@@ -83,15 +83,16 @@ namespace CalabozosYDragones_lab
 
             //posicionA = intermedio.RetrocesoDragon1();
 
-            if (posicionA == posicionDragon)
+            if (posicionA == DragonHumano)
             {
                 intermedio.AvanceDragon1();
+                Refresh();
             }
 
-            else if (posicionA == posiciondragon2)
+            else if (posicionA == DragonHumano2)
             {
                 intermedio.AvanceDragon2();
-
+                Refresh();
             }
 
 

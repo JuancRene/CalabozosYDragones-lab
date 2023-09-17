@@ -17,6 +17,7 @@ namespace CalabozosYDragones_lab
             Posicion = posicion;
 
         }
+
         public int MoverCaballeroHumano()
         {
             int posicionC = dado.Next(1, 6);
