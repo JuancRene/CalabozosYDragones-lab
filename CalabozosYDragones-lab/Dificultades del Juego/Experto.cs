@@ -10,7 +10,13 @@ namespace CalabozosYDragones_lab
 {
     internal class Experto
     {
-
+        
+        Random r = new Random();
+        int posicion = r.Next(0, 59);
+        Experto()
+        {
+            Calabozo calbozo = new Calabozo(posicion);
+        }
       
     }
 }
