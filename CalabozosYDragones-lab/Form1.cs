@@ -52,27 +52,26 @@ namespace CalabozosYDragones_lab
 
         private void BtnHumano_Click_1(object sender, EventArgs e)
         {
-            #region Dragon1
-            DragonHumano = sistema.MoverDragonHumano();
-            sistema.ColumnaDragon1 = (DragonHumano % 10) * 90;
-            sistema.FilaDragon1 = (DragonHumano / 10) * 90;
-            
-            
+            if(comboBox1.SelectedIndex == 1)
+            {
+                #region Dragon1
+                DragonHumano = sistema.MoverDragonHumano();
+                sistema.ColumnaDragon1 = (DragonHumano % 10) * 90;
+                sistema.FilaDragon1 = (DragonHumano / 10) * 90;
 
-            #endregion
+                #endregion
 
-            #region Dragon2
+                #region Dragon2
 
-            DragonHumano2 = sistema.MoverDragonHumano2();
-            sistema.ColumnaDragon2 = (DragonHumano2 % 10) * 90;
-            sistema.FilaDragon2 = (DragonHumano2 / 10) * 90;
+                DragonHumano2 = sistema.MoverDragonHumano2();
+                sistema.ColumnaDragon2 = (DragonHumano2 % 10) * 90;
+                sistema.FilaDragon2 = (DragonHumano2 / 10) * 90;
 
-            DragoncitoHumano1.Visible = true;
-            DragoncitoHumano2.Visible = true;
+                DragoncitoHumano1.Visible = true;
+                DragoncitoHumano2.Visible = true;
 
-
-            #endregion
-
+                #endregion
+            }
 
             dadoA.Visible = false;
             jugador = 1;
@@ -113,13 +112,19 @@ namespace CalabozosYDragones_lab
 
         private void Iniciar()
         {
-            caballero.PosicionInicial(CaballeroRojo);
-            caballero.PosicionInicialVirtual(CaballeroAzul);
+            caballero.PosicionInicial(CaballeroRosa);
+            caballero.PosicionInicialVirtual1(CaballeroAzul);
+            caballero.PosicionInicialVirtual2(CaballeroAmarillo);
+            caballero.PosicionInicialVirtual3(CaballeroVerde);
+
             //dragones.PosicionInicialDH(DragoncitoHumano1);
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            //PantallaCarga pantallaCarga = new PantallaCarga(6);
+            //pantallaCarga.ShowDialog();
+
             BtnHumano.Enabled = false;
             BtnMaquina.Enabled = false;
             Calabozo1.Visible = false;
@@ -129,12 +134,12 @@ namespace CalabozosYDragones_lab
             DragoncitoHumano2.Visible = false;
             CaballeroAmarillo.Visible = false;
             CaballeroAzul.Visible = false;
-            CaballeroRojo.Visible = false;
+            CaballeroRosa.Visible = false;
             CaballeroVerde.Visible = false;
-
+            BtnMaquina.Visible = false;
+            BtnMaquina2.Visible = false;
+            BtnMaquina3.Visible = false;
             
-            //PantallaCarga pantallaCarga = new PantallaCarga(6);
-            //pantallaCarga.ShowDialog();
         }
 
         private void dragoncito_Tick(object sender, EventArgs e)
@@ -218,11 +223,28 @@ namespace CalabozosYDragones_lab
             if(NroDeJugadores == 1)
             {
                 CaballeroAzul.Visible = true;
+                BtnMaquina.Visible = true;
             }
             if(NroDeJugadores == 2)
             {
+                CaballeroAmarillo.Visible = true;
+                CaballeroAzul.Visible = true;
+                BtnMaquina2.Visible = true;
+                BtnMaquina.Visible = true;
 
             }
+            if (NroDeJugadores == 3)
+            {
+                CaballeroAzul.Visible = true;
+                CaballeroVerde.Visible = true;
+                CaballeroAmarillo.Visible = true;
+                CaballeroVerde.Visible = true;
+                BtnMaquina2.Visible = true;
+                BtnMaquina.Visible = true;
+                BtnMaquina3.Visible = true;
+
+            }
+
 
             BtnHumano.Enabled = true;
             BtnMaquina.Enabled = true;
@@ -245,27 +267,16 @@ namespace CalabozosYDragones_lab
 
             if (comboBox1.SelectedIndex == 0)
             {
-                CaballeroRojo.Visible = true;
+                CaballeroRosa.Visible = true;
                 comboBox1.Enabled = false;
+
             }
             
-                if (comboBox1.SelectedIndex == 1)
+            if (comboBox1.SelectedIndex == 1)
             {
-                //sistema.PosicionDragon1 = 35;
-                //sistema.PosicionDragon1 = 50;
-               
-                //DragoncitoHumano1.Left = 35;
-                //DragoncitoHumano1.Top = 50;
-                //DragoncitoHumano2.Left = 35;
-                //DragoncitoHumano2.Top = 50;
-                //DragoncitoHumano1.Visible = true;
-                //DragoncitoHumano2.Visible = true;
-
-
-
-                //string seleccionarItem = comboBox1.SelectedIndex.ToString();
-                //MessageBox.Show("" + seleccionarItem);
-                
+                DragoncitoHumano1.Visible = true;
+                DragoncitoHumano2.Visible = true;
+                comboBox1.Enabled = false;
             }
             else if (comboBox1.SelectedIndex == 2)
             {
@@ -297,13 +308,13 @@ namespace CalabozosYDragones_lab
                         DragoncitoHumano2.Top = 65 + sistema.FilaDragon2;
                         DragoncitoHumano1.Left = 55 + sistema.ColumnaDragon1;
                         DragoncitoHumano1.Top = 65 + sistema.FilaDragon1;
-                        CaballeroRojo.Left = 55 + c;
-                        CaballeroRojo.Top = 65 + f;
+                        CaballeroRosa.Left = 55 + c;
+                        CaballeroRosa.Top = 65 + f;
                         
                         if (posicionA >= 49)
                         {
-                            CaballeroRojo.Left = 15 + 300;
-                            CaballeroRojo.Top = 5 + 300;
+                            CaballeroRosa.Left = 15 + 300;
+                            CaballeroRosa.Top = 5 + 300;
                             MessageBox.Show("GANO EL CABALLERO ROJO");
                             c = 0;
                             f = 0;
@@ -331,6 +342,13 @@ namespace CalabozosYDragones_lab
                             Iniciar();
                             
                         }
+                        break;
+                    }
+
+                    case 3:
+                    {
+
+
                         break;
                     }
             }

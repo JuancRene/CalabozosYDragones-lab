@@ -19,17 +19,28 @@ namespace CalabozosYDragones_lab
            PosicionCaballero = posicion;
         }
 
-        public void PosicionInicial(Panel caballeroRojo)
+        public void PosicionInicial(Panel caballeroRosa)
         {
-            caballeroRojo.Left = 35;
-            caballeroRojo.Top = 50;
+            caballeroRosa.Left = 35;
+            caballeroRosa.Top = 50;
         }
 
-        public void PosicionInicialVirtual(Panel caballeroAzul)
+        public void PosicionInicialVirtual1(Panel caballeroAzul)
         {
             caballeroAzul.Left = 35;
             caballeroAzul.Top = 50;
         }
+        public void PosicionInicialVirtual2(Panel caballeroAmarillo)
+        {
+            caballeroAmarillo.Left = 35;
+            caballeroAmarillo.Top = 50;
+        }
+        public void PosicionInicialVirtual3(Panel caballeroVerde)
+        {
+            caballeroVerde.Left = 35;
+            caballeroVerde.Top = 50;
+        }
+
 
         public void AgregarCaballero(Caballero unCaballero)
         {

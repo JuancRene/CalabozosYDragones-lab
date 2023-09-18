@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.CaballeroRojo = new System.Windows.Forms.Panel();
+            this.CaballeroRosa = new System.Windows.Forms.Panel();
             this.CaballeroAzul = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.DragoncitoHumano1 = new System.Windows.Forms.Panel();
@@ -53,24 +53,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.CaballeroVerde = new System.Windows.Forms.Panel();
             this.CaballeroAmarillo = new System.Windows.Forms.Panel();
+            this.BtnMaquina2 = new System.Windows.Forms.Button();
+            this.BtnMaquina3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pBdado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CaballeroRojo
+            // CaballeroRosa
             // 
-            this.CaballeroRojo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroRojo.BackgroundImage")));
-            this.CaballeroRojo.Location = new System.Drawing.Point(458, 567);
-            this.CaballeroRojo.Name = "CaballeroRojo";
-            this.CaballeroRojo.Size = new System.Drawing.Size(47, 63);
-            this.CaballeroRojo.TabIndex = 1;
-            this.CaballeroRojo.Paint += new System.Windows.Forms.PaintEventHandler(this.CaballeroRojo_Paint);
+            this.CaballeroRosa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroRosa.BackgroundImage")));
+            this.CaballeroRosa.Location = new System.Drawing.Point(392, 567);
+            this.CaballeroRosa.Name = "CaballeroRosa";
+            this.CaballeroRosa.Size = new System.Drawing.Size(47, 63);
+            this.CaballeroRosa.TabIndex = 1;
+            this.CaballeroRosa.Paint += new System.Windows.Forms.PaintEventHandler(this.CaballeroRojo_Paint);
             // 
             // CaballeroAzul
             // 
             this.CaballeroAzul.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroAzul.BackgroundImage")));
-            this.CaballeroAzul.Location = new System.Drawing.Point(406, 567);
+            this.CaballeroAzul.Location = new System.Drawing.Point(340, 567);
             this.CaballeroAzul.Name = "CaballeroAzul";
             this.CaballeroAzul.Size = new System.Drawing.Size(46, 63);
             this.CaballeroAzul.TabIndex = 2;
@@ -131,14 +133,14 @@
             this.BtnMaquina.Name = "BtnMaquina";
             this.BtnMaquina.Size = new System.Drawing.Size(107, 88);
             this.BtnMaquina.TabIndex = 6;
-            this.BtnMaquina.Text = "Maquina";
+            this.BtnMaquina.Text = "Maquina 1";
             this.BtnMaquina.UseVisualStyleBackColor = true;
             this.BtnMaquina.Click += new System.EventHandler(this.BtnMaquina_Click);
             // 
             // pBdado
             // 
             this.pBdado.Image = ((System.Drawing.Image)(resources.GetObject("pBdado.Image")));
-            this.pBdado.Location = new System.Drawing.Point(983, 333);
+            this.pBdado.Location = new System.Drawing.Point(970, 437);
             this.pBdado.Name = "pBdado";
             this.pBdado.Size = new System.Drawing.Size(224, 208);
             this.pBdado.TabIndex = 7;
@@ -148,7 +150,7 @@
             // 
             this.dadoA.AutoSize = true;
             this.dadoA.Font = new System.Drawing.Font("Impact", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dadoA.Location = new System.Drawing.Point(1034, 397);
+            this.dadoA.Location = new System.Drawing.Point(1073, 470);
             this.dadoA.Name = "dadoA";
             this.dadoA.Size = new System.Drawing.Size(0, 117);
             this.dadoA.TabIndex = 8;
@@ -254,7 +256,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.FlatAppearance.BorderSize = 1200;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(992, 124);
+            this.button1.Location = new System.Drawing.Point(992, 115);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 68);
             this.button1.TabIndex = 18;
@@ -278,12 +280,32 @@
             this.CaballeroAmarillo.Size = new System.Drawing.Size(46, 63);
             this.CaballeroAmarillo.TabIndex = 3;
             // 
+            // BtnMaquina2
+            // 
+            this.BtnMaquina2.Location = new System.Drawing.Point(970, 328);
+            this.BtnMaquina2.Name = "BtnMaquina2";
+            this.BtnMaquina2.Size = new System.Drawing.Size(107, 88);
+            this.BtnMaquina2.TabIndex = 19;
+            this.BtnMaquina2.Text = "Maquina 2";
+            this.BtnMaquina2.UseVisualStyleBackColor = true;
+            // 
+            // BtnMaquina3
+            // 
+            this.BtnMaquina3.Location = new System.Drawing.Point(1087, 328);
+            this.BtnMaquina3.Name = "BtnMaquina3";
+            this.BtnMaquina3.Size = new System.Drawing.Size(107, 88);
+            this.BtnMaquina3.TabIndex = 20;
+            this.BtnMaquina3.Text = "Maquina 3";
+            this.BtnMaquina3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1263, 658);
+            this.Controls.Add(this.BtnMaquina3);
+            this.Controls.Add(this.BtnMaquina2);
             this.Controls.Add(this.CaballeroAmarillo);
             this.Controls.Add(this.CaballeroVerde);
             this.Controls.Add(this.button1);
@@ -296,7 +318,7 @@
             this.Controls.Add(this.Calabozo3);
             this.Controls.Add(this.Calabozo2);
             this.Controls.Add(this.CaballeroAzul);
-            this.Controls.Add(this.CaballeroRojo);
+            this.Controls.Add(this.CaballeroRosa);
             this.Controls.Add(this.pBdado);
             this.Controls.Add(this.dadoR);
             this.Controls.Add(this.dadoA);
@@ -317,7 +339,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel CaballeroRojo;
+        private System.Windows.Forms.Panel CaballeroRosa;
         private System.Windows.Forms.Panel CaballeroAzul;
         private System.Windows.Forms.Panel DragoncitoHumano1;
         private System.Windows.Forms.Panel DragoncitoHumano2;
@@ -340,6 +362,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel CaballeroVerde;
         private System.Windows.Forms.Panel CaballeroAmarillo;
+        private System.Windows.Forms.Button BtnMaquina2;
+        private System.Windows.Forms.Button BtnMaquina3;
     }
 }
 
