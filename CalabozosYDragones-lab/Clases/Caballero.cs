@@ -13,7 +13,7 @@ namespace CalabozosYDragones_lab
         public int contador = 0;
         public int PosicionCaballero {get; set;}
         Caballero[] caballero = new Caballero[3];
-
+        public string BautiLindo {get; protected set;}
         public Caballero( int posicion): base(posicion)
         {
            PosicionCaballero = posicion;
