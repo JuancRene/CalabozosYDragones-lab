@@ -38,8 +38,6 @@ namespace CalabozosYDragones_lab
         int DragonHumano2 = 0;
         bool mostarLista = false;
         
-
-
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +56,8 @@ namespace CalabozosYDragones_lab
             sistema.ColumnaDragon1 = (DragonHumano % 10) * 90;
             sistema.FilaDragon1 = (DragonHumano / 10) * 90;
             
+            
+
             #endregion
 
             #region Dragon2
@@ -65,7 +65,10 @@ namespace CalabozosYDragones_lab
             DragonHumano2 = sistema.MoverDragonHumano2();
             sistema.ColumnaDragon2 = (DragonHumano2 % 10) * 90;
             sistema.FilaDragon2 = (DragonHumano2 / 10) * 90;
-            
+
+            DragoncitoHumano1.Visible = true;
+            DragoncitoHumano2.Visible = true;
+
 
             #endregion
 
@@ -79,6 +82,7 @@ namespace CalabozosYDragones_lab
             c = (posicionA % 10) * 90;
             f = (posicionA / 10) * 90;
             dadoA.Text = sistema.NumeroRandom3.ToString();
+            
 
 
             //posicionA = intermedio.RetrocesoDragon1();
@@ -94,6 +98,8 @@ namespace CalabozosYDragones_lab
                 intermedio.AvanceDragon2();
                 Refresh();
             }
+
+           
 
 
         }
@@ -205,7 +211,7 @@ namespace CalabozosYDragones_lab
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -219,12 +225,12 @@ namespace CalabozosYDragones_lab
                 //sistema.PosicionDragon1 = 35;
                 //sistema.PosicionDragon1 = 50;
                
-                DragoncitoHumano1.Left = 35;
-                DragoncitoHumano1.Top = 50;
-                DragoncitoHumano2.Left = 35;
-                DragoncitoHumano2.Top = 50;
-                DragoncitoHumano1.Visible = true;
-                DragoncitoHumano2.Visible = true;
+                //DragoncitoHumano1.Left = 35;
+                //DragoncitoHumano1.Top = 50;
+                //DragoncitoHumano2.Left = 35;
+                //DragoncitoHumano2.Top = 50;
+                //DragoncitoHumano1.Visible = true;
+                //DragoncitoHumano2.Visible = true;
 
 
 
