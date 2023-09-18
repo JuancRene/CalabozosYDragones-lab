@@ -9,11 +9,17 @@ namespace CalabozosYDragones_lab.Clases
 {
     internal class Calabozo
     {
+        public int Calabozo1 { get; set; }
+        public int Calabozo2 { get; set; }
 
-        public Random AgregarCalabozo(Random Posicion)
+        public int Calabozo3 { get; set; }
+
+        public Calabozo(int posicion) 
         {
-            Posicion.Next(0,49);
-            return Posicion;
+            Calabozo1 = posicion;
+            Calabozo2 = posicion;
+            Calabozo3 = posicion;
         }
+      
     }
 }
