@@ -35,6 +35,8 @@ namespace CalabozosYDragones_lab
         public int NumeroRandom3 { get; set; }
         public int ColumnaDragon2 { get; set; }
         public int FilaDragon2 { get; set; }
+        public int NumeroRandom4 { get; set; }
+        public int NumeroRandom5 { get; set; }
 
 
         Random NumeroAleatorio = new Random();
@@ -61,7 +63,6 @@ namespace CalabozosYDragones_lab
             Random Posicion = new Random();
             NumeroRandom3 = Posicion.Next(1, 6);
             return NumeroRandom3;
-
         }
 
         public int MoverMaquina()
@@ -70,7 +71,19 @@ namespace CalabozosYDragones_lab
             NumeroRandom1 = Posicion.Next(1, 6);
             return NumeroRandom1;
         }
-        
+        public int MoverMaquina2()
+        {
+            Random Mover = new Random();
+            NumeroRandom4 = Mover.Next(1, 6);
+            return NumeroRandom4;
+        }
+        public int MoverMaquina3()
+        {
+            Random MoverMaquina3 = new Random();
+            NumeroRandom5 = MoverMaquina3.Next(1, 6);
+            return NumeroRandom5;
+        }
+
         public int MoverDragonHumano()
         {
 

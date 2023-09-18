@@ -55,6 +55,12 @@
             this.CaballeroAmarillo = new System.Windows.Forms.Panel();
             this.BtnMaquina2 = new System.Windows.Forms.Button();
             this.BtnMaquina3 = new System.Windows.Forms.Button();
+            this.DragonAmarillo1 = new System.Windows.Forms.Panel();
+            this.DragonAmarillo2 = new System.Windows.Forms.Panel();
+            this.DragonAzul1 = new System.Windows.Forms.Panel();
+            this.DragonAzul2 = new System.Windows.Forms.Panel();
+            this.DragonVerde1 = new System.Windows.Forms.Panel();
+            this.DragonVerde2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pBdado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -63,7 +69,7 @@
             // CaballeroRosa
             // 
             this.CaballeroRosa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroRosa.BackgroundImage")));
-            this.CaballeroRosa.Location = new System.Drawing.Point(392, 567);
+            this.CaballeroRosa.Location = new System.Drawing.Point(510, 567);
             this.CaballeroRosa.Name = "CaballeroRosa";
             this.CaballeroRosa.Size = new System.Drawing.Size(47, 63);
             this.CaballeroRosa.TabIndex = 1;
@@ -72,7 +78,7 @@
             // CaballeroAzul
             // 
             this.CaballeroAzul.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroAzul.BackgroundImage")));
-            this.CaballeroAzul.Location = new System.Drawing.Point(340, 567);
+            this.CaballeroAzul.Location = new System.Drawing.Point(458, 567);
             this.CaballeroAzul.Name = "CaballeroAzul";
             this.CaballeroAzul.Size = new System.Drawing.Size(46, 63);
             this.CaballeroAzul.TabIndex = 2;
@@ -97,9 +103,9 @@
             // DragoncitoHumano1
             // 
             this.DragoncitoHumano1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragoncitoHumano1.BackgroundImage")));
-            this.DragoncitoHumano1.Location = new System.Drawing.Point(802, 567);
+            this.DragoncitoHumano1.Location = new System.Drawing.Point(800, 567);
             this.DragoncitoHumano1.Name = "DragoncitoHumano1";
-            this.DragoncitoHumano1.Size = new System.Drawing.Size(51, 84);
+            this.DragoncitoHumano1.Size = new System.Drawing.Size(47, 69);
             this.DragoncitoHumano1.TabIndex = 3;
             this.DragoncitoHumano1.Paint += new System.Windows.Forms.PaintEventHandler(this.DragoncitoHumano1_Paint);
             // 
@@ -108,7 +114,7 @@
             this.DragoncitoHumano2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragoncitoHumano2.BackgroundImage")));
             this.DragoncitoHumano2.Location = new System.Drawing.Point(877, 567);
             this.DragoncitoHumano2.Name = "DragoncitoHumano2";
-            this.DragoncitoHumano2.Size = new System.Drawing.Size(51, 84);
+            this.DragoncitoHumano2.Size = new System.Drawing.Size(47, 69);
             this.DragoncitoHumano2.TabIndex = 4;
             this.DragoncitoHumano2.Paint += new System.Windows.Forms.PaintEventHandler(this.DragoncitoHumano2_Paint);
             // 
@@ -182,7 +188,7 @@
             // Calabozo2
             // 
             this.Calabozo2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Calabozo2.BackgroundImage")));
-            this.Calabozo2.Location = new System.Drawing.Point(622, 567);
+            this.Calabozo2.Location = new System.Drawing.Point(638, 567);
             this.Calabozo2.Name = "Calabozo2";
             this.Calabozo2.Size = new System.Drawing.Size(69, 78);
             this.Calabozo2.TabIndex = 12;
@@ -190,7 +196,7 @@
             // Calabozo1
             // 
             this.Calabozo1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Calabozo1.BackgroundImage")));
-            this.Calabozo1.Location = new System.Drawing.Point(535, 567);
+            this.Calabozo1.Location = new System.Drawing.Point(563, 567);
             this.Calabozo1.Name = "Calabozo1";
             this.Calabozo1.Size = new System.Drawing.Size(69, 78);
             this.Calabozo1.TabIndex = 13;
@@ -198,7 +204,7 @@
             // Calabozo3
             // 
             this.Calabozo3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Calabozo3.BackgroundImage")));
-            this.Calabozo3.Location = new System.Drawing.Point(697, 567);
+            this.Calabozo3.Location = new System.Drawing.Point(713, 567);
             this.Calabozo3.Name = "Calabozo3";
             this.Calabozo3.Size = new System.Drawing.Size(69, 78);
             this.Calabozo3.TabIndex = 13;
@@ -267,7 +273,7 @@
             // CaballeroVerde
             // 
             this.CaballeroVerde.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroVerde.BackgroundImage")));
-            this.CaballeroVerde.Location = new System.Drawing.Point(236, 567);
+            this.CaballeroVerde.Location = new System.Drawing.Point(354, 567);
             this.CaballeroVerde.Name = "CaballeroVerde";
             this.CaballeroVerde.Size = new System.Drawing.Size(46, 63);
             this.CaballeroVerde.TabIndex = 3;
@@ -275,7 +281,7 @@
             // CaballeroAmarillo
             // 
             this.CaballeroAmarillo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroAmarillo.BackgroundImage")));
-            this.CaballeroAmarillo.Location = new System.Drawing.Point(288, 567);
+            this.CaballeroAmarillo.Location = new System.Drawing.Point(406, 567);
             this.CaballeroAmarillo.Name = "CaballeroAmarillo";
             this.CaballeroAmarillo.Size = new System.Drawing.Size(46, 63);
             this.CaballeroAmarillo.TabIndex = 3;
@@ -288,6 +294,7 @@
             this.BtnMaquina2.TabIndex = 19;
             this.BtnMaquina2.Text = "Maquina 2";
             this.BtnMaquina2.UseVisualStyleBackColor = true;
+            this.BtnMaquina2.Click += new System.EventHandler(this.BtnMaquina2_Click);
             // 
             // BtnMaquina3
             // 
@@ -297,6 +304,55 @@
             this.BtnMaquina3.TabIndex = 20;
             this.BtnMaquina3.Text = "Maquina 3";
             this.BtnMaquina3.UseVisualStyleBackColor = true;
+            this.BtnMaquina3.Click += new System.EventHandler(this.BtnMaquina3_Click);
+            // 
+            // DragonAmarillo1
+            // 
+            this.DragonAmarillo1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonAmarillo1.BackgroundImage")));
+            this.DragonAmarillo1.Location = new System.Drawing.Point(12, 576);
+            this.DragonAmarillo1.Name = "DragonAmarillo1";
+            this.DragonAmarillo1.Size = new System.Drawing.Size(47, 69);
+            this.DragonAmarillo1.TabIndex = 4;
+            // 
+            // DragonAmarillo2
+            // 
+            this.DragonAmarillo2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonAmarillo2.BackgroundImage")));
+            this.DragonAmarillo2.Location = new System.Drawing.Point(65, 577);
+            this.DragonAmarillo2.Name = "DragonAmarillo2";
+            this.DragonAmarillo2.Size = new System.Drawing.Size(47, 69);
+            this.DragonAmarillo2.TabIndex = 5;
+            // 
+            // DragonAzul1
+            // 
+            this.DragonAzul1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonAzul1.BackgroundImage")));
+            this.DragonAzul1.Location = new System.Drawing.Point(118, 577);
+            this.DragonAzul1.Name = "DragonAzul1";
+            this.DragonAzul1.Size = new System.Drawing.Size(47, 69);
+            this.DragonAzul1.TabIndex = 5;
+            // 
+            // DragonAzul2
+            // 
+            this.DragonAzul2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonAzul2.BackgroundImage")));
+            this.DragonAzul2.Location = new System.Drawing.Point(171, 577);
+            this.DragonAzul2.Name = "DragonAzul2";
+            this.DragonAzul2.Size = new System.Drawing.Size(47, 69);
+            this.DragonAzul2.TabIndex = 6;
+            // 
+            // DragonVerde1
+            // 
+            this.DragonVerde1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonVerde1.BackgroundImage")));
+            this.DragonVerde1.Location = new System.Drawing.Point(224, 577);
+            this.DragonVerde1.Name = "DragonVerde1";
+            this.DragonVerde1.Size = new System.Drawing.Size(47, 69);
+            this.DragonVerde1.TabIndex = 7;
+            // 
+            // DragonVerde2
+            // 
+            this.DragonVerde2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonVerde2.BackgroundImage")));
+            this.DragonVerde2.Location = new System.Drawing.Point(277, 577);
+            this.DragonVerde2.Name = "DragonVerde2";
+            this.DragonVerde2.Size = new System.Drawing.Size(47, 69);
+            this.DragonVerde2.TabIndex = 8;
             // 
             // Form1
             // 
@@ -304,6 +360,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1263, 658);
+            this.Controls.Add(this.DragonVerde2);
+            this.Controls.Add(this.DragonVerde1);
+            this.Controls.Add(this.DragonAzul2);
+            this.Controls.Add(this.DragonAzul1);
+            this.Controls.Add(this.DragonAmarillo2);
+            this.Controls.Add(this.DragonAmarillo1);
             this.Controls.Add(this.BtnMaquina3);
             this.Controls.Add(this.BtnMaquina2);
             this.Controls.Add(this.CaballeroAmarillo);
@@ -364,6 +426,12 @@
         private System.Windows.Forms.Panel CaballeroAmarillo;
         private System.Windows.Forms.Button BtnMaquina2;
         private System.Windows.Forms.Button BtnMaquina3;
+        private System.Windows.Forms.Panel DragonAmarillo1;
+        private System.Windows.Forms.Panel DragonAmarillo2;
+        private System.Windows.Forms.Panel DragonAzul1;
+        private System.Windows.Forms.Panel DragonAzul2;
+        private System.Windows.Forms.Panel DragonVerde1;
+        private System.Windows.Forms.Panel DragonVerde2;
     }
 }
 

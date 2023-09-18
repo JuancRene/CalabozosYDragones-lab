@@ -75,6 +75,30 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Sistema.cs" />
+    <Compile Include="WinnerAmarillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinnerAmarillo.Designer.cs">
+      <DependentUpon>WinnerAmarillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerAzul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinnerAzul.Designer.cs">
+      <DependentUpon>WinnerAzul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerRosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinnerRosa.Designer.cs">
+      <DependentUpon>WinnerRosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerVerde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinnerVerde.Designer.cs">
+      <DependentUpon>WinnerVerde.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +117,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WinnerAmarillo.resx">
+      <DependentUpon>WinnerAmarillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinnerAzul.resx">
+      <DependentUpon>WinnerAzul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinnerRosa.resx">
+      <DependentUpon>WinnerRosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinnerVerde.resx">
+      <DependentUpon>WinnerVerde.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
