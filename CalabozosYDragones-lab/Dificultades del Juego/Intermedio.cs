@@ -20,7 +20,7 @@ namespace CalabozosYDragones_lab.Clases
         {
             
            
-        } 
+        }
 
         public int AvanceDragon1()
         {

@@ -113,12 +113,14 @@ namespace CalabozosYDragones_lab
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            BtnHumano.Enabled = false;
+            BtnMaquina.Enabled = false;
             Calabozo1.Visible = false;
             Calabozo2.Visible = false;
             Calabozo3.Visible = false;
             DragoncitoHumano1.Visible = false;
             DragoncitoHumano2.Visible = false;
-            panel5.Visible = false;
+            
             //PantallaCarga pantallaCarga = new PantallaCarga(6);
             //pantallaCarga.ShowDialog();
         }
@@ -186,6 +188,23 @@ namespace CalabozosYDragones_lab
 
         }
 
+        private void CaballeroAzul_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CaballeroRojo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            BtnHumano.Enabled = true;
+            BtnMaquina.Enabled = true;
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -206,6 +225,9 @@ namespace CalabozosYDragones_lab
                 DragoncitoHumano2.Top = 50;
                 DragoncitoHumano1.Visible = true;
                 DragoncitoHumano2.Visible = true;
+
+
+
                 //string seleccionarItem = comboBox1.SelectedIndex.ToString();
                 //MessageBox.Show("" + seleccionarItem);
                 
@@ -223,7 +245,7 @@ namespace CalabozosYDragones_lab
                
                 DragoncitoHumano1.Visible = false;
                 DragoncitoHumano2.Visible = false;
-                panel5.Visible = false;
+                
                 
             }
             

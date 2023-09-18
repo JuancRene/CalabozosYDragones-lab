@@ -10,7 +10,7 @@ namespace CalabozosYDragones_lab
 {
     internal class Dragones : Pieza
     {
-      public int DragonHumano1 { get; set; }
+        public int DragonHumano1 { get; set; }
         public int DragonHumano2 { get; set; }
 
         public int DragonVirtual1 { get; set; }
