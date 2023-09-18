@@ -52,17 +52,17 @@ namespace CalabozosYDragones_lab
         private void BtnHumano_Click_1(object sender, EventArgs e)
         {
             #region Dragon1
-            DragonHumano = sistema.MoverDragonHumano();
+            dragones.PosicionInicialDH1(DragoncitoHumano1);
             sistema.ColumnaDragon1 = (DragonHumano % 10) * 90;
             sistema.FilaDragon1 = (DragonHumano / 10) * 90;
-            
-            
+
+
 
             #endregion
 
             #region Dragon2
 
-            DragonHumano2 = sistema.MoverDragonHumano2();
+            dragones.PosicionInicialDH2(DragoncitoHumano2);
             sistema.ColumnaDragon2 = (DragonHumano2 % 10) * 90;
             sistema.FilaDragon2 = (DragonHumano2 / 10) * 90;
 
@@ -112,8 +112,9 @@ namespace CalabozosYDragones_lab
 
         private void Iniciar()
         {
-            caballero.PosicionInicial(CaballeroRojo);
-            caballero.PosicionInicialVirtual(CaballeroAzul);
+            caballero.PosicionInicialH(CaballeroRosado);
+            caballero.PosicionInicialV1(CaballeroAzul);
+            
             //dragones.PosicionInicialDH(DragoncitoHumano1);
 
         }
@@ -222,9 +223,8 @@ namespace CalabozosYDragones_lab
 
             if (comboBox1.SelectedIndex == 1)
             {
-                //sistema.PosicionDragon1 = 35;
-                //sistema.PosicionDragon1 = 50;
-               
+                dragones.PosicionInicialDH1(DragoncitoHumano1);
+                dragones.PosicionInicialDH2(DragoncitoHumano1);
                 //DragoncitoHumano1.Left = 35;
                 //DragoncitoHumano1.Top = 50;
                 //DragoncitoHumano2.Left = 35;
@@ -268,13 +268,13 @@ namespace CalabozosYDragones_lab
                         DragoncitoHumano2.Top = 65 + sistema.FilaDragon2;
                         DragoncitoHumano1.Left = 55 + sistema.ColumnaDragon1;
                         DragoncitoHumano1.Top = 65 + sistema.FilaDragon1;
-                        CaballeroRojo.Left = 55 + c;
-                        CaballeroRojo.Top = 65 + f;
+                        CaballeroRosado.Left = 55 + c;
+                        CaballeroRosado.Top = 65 + f;
                         
                         if (posicionA >= 49)
                         {
-                            CaballeroRojo.Left = 15 + 300;
-                            CaballeroRojo.Top = 5 + 300;
+                            CaballeroRosado.Left = 15 + 300;
+                            CaballeroRosado.Top = 5 + 300;
                             MessageBox.Show("GANO EL CABALLERO ROJO");
                             c = 0;
                             f = 0;

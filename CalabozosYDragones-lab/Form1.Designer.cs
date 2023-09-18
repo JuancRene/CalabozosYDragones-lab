@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.CaballeroRojo = new System.Windows.Forms.Panel();
+            this.CaballeroRosado = new System.Windows.Forms.Panel();
             this.CaballeroAzul = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.DragoncitoHumano1 = new System.Windows.Forms.Panel();
@@ -56,14 +56,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CaballeroRojo
+            // CaballeroRosado
             // 
-            this.CaballeroRojo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroRojo.BackgroundImage")));
-            this.CaballeroRojo.Location = new System.Drawing.Point(458, 567);
-            this.CaballeroRojo.Name = "CaballeroRojo";
-            this.CaballeroRojo.Size = new System.Drawing.Size(47, 63);
-            this.CaballeroRojo.TabIndex = 1;
-            this.CaballeroRojo.Paint += new System.Windows.Forms.PaintEventHandler(this.CaballeroRojo_Paint);
+            this.CaballeroRosado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CaballeroRosado.BackgroundImage")));
+            this.CaballeroRosado.Location = new System.Drawing.Point(458, 567);
+            this.CaballeroRosado.Name = "CaballeroRosado";
+            this.CaballeroRosado.Size = new System.Drawing.Size(47, 63);
+            this.CaballeroRosado.TabIndex = 1;
+            this.CaballeroRosado.Paint += new System.Windows.Forms.PaintEventHandler(this.CaballeroRojo_Paint);
             // 
             // CaballeroAzul
             // 
@@ -273,7 +273,7 @@
             this.Controls.Add(this.Calabozo3);
             this.Controls.Add(this.Calabozo2);
             this.Controls.Add(this.CaballeroAzul);
-            this.Controls.Add(this.CaballeroRojo);
+            this.Controls.Add(this.CaballeroRosado);
             this.Controls.Add(this.pBdado);
             this.Controls.Add(this.dadoR);
             this.Controls.Add(this.dadoA);
@@ -294,7 +294,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel CaballeroRojo;
+        private System.Windows.Forms.Panel CaballeroRosado;
         private System.Windows.Forms.Panel CaballeroAzul;
         private System.Windows.Forms.Panel DragoncitoHumano1;
         private System.Windows.Forms.Panel DragoncitoHumano2;

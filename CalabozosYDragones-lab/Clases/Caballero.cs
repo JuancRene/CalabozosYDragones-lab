@@ -11,32 +11,61 @@ namespace CalabozosYDragones_lab
     {
        
         public int contador = 0;
-        public int PosicionCaballero {get; set;}
-        Caballero[] caballero = new Caballero[3];
-        public string BautiLindo {get; protected set;}
+        public int AvanceCaballeroH { get; set; } 
+         public int AvanceCaballeroV1 { get; set; }
+        public int AvanceCaballeroV2 { get; set; }
+        public int AvanceCaballeroV3 { get; set; }
+        //Caballero[] caballero = new Caballero[3];
+
         public Caballero( int posicion): base(posicion)
         {
-           PosicionCaballero = posicion;
+            AvanceCaballeroH = posicion;
+            AvanceCaballeroV1 = posicion;
+            AvanceCaballeroV2 = posicion;
+            AvanceCaballeroV3 = posicion;
         }
 
-        public void PosicionInicial(Panel caballeroRojo)
+        public int PosicionInicialH(Panel caballeroRosado)
         {
-            caballeroRojo.Left = 35;
-            caballeroRojo.Top = 50;
+            AvanceCaballeroH = base.PosicionInicialCaballeros();
+            caballeroRosado.Left = 35;
+            caballeroRosado.Top = 50;
+            return AvanceCaballeroH;
         }
-
-        public void PosicionInicialVirtual(Panel caballeroAzul)
+        public void PosicionInicialV1(Panel caballeroAzul)
         {
+            AvanceCaballeroV1 = base.PosicionInicialCaballeros();
             caballeroAzul.Left = 35;
             caballeroAzul.Top = 50;
         }
 
-        public void AgregarCaballero(Caballero unCaballero)
+        public void PosicionInicialV2(Panel caballeroAmarillo)
         {
-            if (contador <= 3)
-                caballero[contador++] = unCaballero;
-
+            AvanceCaballeroV2 = base.PosicionInicialCaballeros();
+            caballeroAmarillo.Left = 35;
+            caballeroAmarillo.Top = 50;
         }
+
+        public void PosicionInicialV3(Panel caballeroVerde)
+        {
+            AvanceCaballeroV3 = base.PosicionInicialCaballeros();
+            caballeroVerde.Left = 35;
+            caballeroVerde.Top = 50;
+        }
+
+        //public void PosicionInicialVirtual1(Panel caballeroAzul)
+        //{
+        //    AvanceCaballeroV1 = base.PosicionesAleatoriasDragones();
+        //    caballeroAzul.Left = 35;
+        //    caballeroAzul.Top = 50;
+        //}
+
+        //public void AgregarCaballero(Caballero unCaballero)
+        //{
+        //    if (contador <= 3)
+        //        caballero[contador++] = unCaballero;
+
+        //}
     }
 
   
