@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using CalabozosYDragones_lab.Clases;
+using System.ComponentModel.Design;
 
 namespace CalabozosYDragones_lab
 {
@@ -127,6 +128,11 @@ namespace CalabozosYDragones_lab
             Calabozo3.Visible = false;
             DragoncitoHumano1.Visible = false;
             DragoncitoHumano2.Visible = false;
+            CaballeroAmarillo.Visible = false;
+            CaballeroAzul.Visible = false;
+            CaballeroRojo.Visible = false;
+            CaballeroVerde.Visible = false;
+
             
             //PantallaCarga pantallaCarga = new PantallaCarga(6);
             //pantallaCarga.ShowDialog();
@@ -173,7 +179,7 @@ namespace CalabozosYDragones_lab
             FinDelJuego.ShowDialog();
             
         }
-     
+        
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
@@ -207,21 +213,44 @@ namespace CalabozosYDragones_lab
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            decimal NroDeJugadores;
+            NroDeJugadores = numericUpDown1.Value;
+
+            if(NroDeJugadores == 1)
+            {
+                CaballeroAzul.Visible = true;
+            }
+            if(NroDeJugadores == 2)
+            {
+
+            }
+
             BtnHumano.Enabled = true;
             BtnMaquina.Enabled = true;
 
         }
 
-         private void pictureBox1_Click(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+             
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
         
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
 
-            if (comboBox1.SelectedIndex == 1)
+            if (comboBox1.SelectedIndex == 0)
+            {
+                CaballeroRojo.Visible = true;
+                comboBox1.Enabled = false;
+            }
+            
+                if (comboBox1.SelectedIndex == 1)
             {
                 dragones.PosicionInicialDH1(DragoncitoHumano1);
                 dragones.PosicionInicialDH2(DragoncitoHumano1);
