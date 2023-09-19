@@ -48,7 +48,8 @@ namespace CalabozosYDragones_lab
         int DragonMaquina3 = 0;
         int DragonMaquina4 = 0;
         int DragonMaquinaa3 = 0;
-
+        int DragonMaquinaa4 = 0;
+        
 
         #endregion
 
@@ -147,6 +148,8 @@ namespace CalabozosYDragones_lab
             DragonAmarillo2.Visible = false;
             DragoncitoHumano1.Visible = false;
             DragoncitoHumano2.Visible = false;
+            DragonVerde1.Visible = false;
+            DragonVerde2.Visible = false;
             #endregion
 
         }
@@ -158,24 +161,27 @@ namespace CalabozosYDragones_lab
 
         private void BtnMaquina_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == 1)
+            {
+                #region DragonMaquina
+                DragonMaquina = sistema.MoverDragonMaquina();
+                sistema.ColumnaDragonMaquina1 = (DragonMaquina % 10) * 90;
+                sistema.FilaDragonMaquina1 = (DragonMaquina / 10) * 90;
 
-            #region DragonMaquina
-            DragonMaquina = sistema.MoverDragonMaquina();
-            sistema.ColumnaDragonMaquina1 = (DragonMaquina % 10) * 90;
-            sistema.FilaDragonMaquina1 = (DragonMaquina / 10) * 90;
+                #endregion
 
-            #endregion
+                #region DragonMaquina2
 
-            #region DragonMaquina2
+                DragonMaquina2 = sistema.MoverDragonMaquina2();
+                sistema.ColumnaDragonMaquina2 = (DragonMaquina2 % 10) * 90;
+                sistema.FilaDragonMaquina2 = (DragonMaquina2 / 10) * 90;
 
-            DragonMaquina2 = sistema.MoverDragonMaquina2();
-            sistema.ColumnaDragonMaquina2 = (DragonMaquina2 % 10) * 90;
-            sistema.FilaDragonMaquina2 = (DragonMaquina2 / 10) * 90;
+                DragonAzul1.Visible = true;
+                DragonAzul2.Visible = true;
 
-            DragonAzul1.Visible = true;
-            DragonAzul2.Visible = true;
+                #endregion
+            }
 
-            #endregion
             dadoA.Visible = false;
             jugador = 2;
             pBdado.Visible = true;         
@@ -297,23 +303,27 @@ namespace CalabozosYDragones_lab
 
         private void BtnMaquina2_Click(object sender, EventArgs e)
         {
-            #region DragonMaquina3
-            DragonMaquina3 = sistema.MoverDragonMaquina3();
-            sistema.ColumnaDragonMaquina3 = (DragonMaquina3 % 10) * 90;
-            sistema.FilaDragonMaquina3 = (DragonMaquina3 / 10) * 90;
+            if(comboBox1.SelectedIndex == 1)
+            {
+                #region DragonMaquina3
+                DragonMaquina3 = sistema.MoverDragonMaquina3();
+                sistema.ColumnaDragonMaquina3 = (DragonMaquina3 % 10) * 90;
+                sistema.FilaDragonMaquina3 = (DragonMaquina3 / 10) * 90;
 
-            #endregion
+                #endregion
 
-            #region DragonMaquina3
+                #region DragonMaquina3
 
-            DragonMaquinaa3 = sistema.MoverDragonMaquinaa3();
-            sistema.ColumnaDragonMaquinaa3 = (DragonMaquinaa3 % 10) * 90;
-            sistema.FilaDragonMaquinaa3 = (DragonMaquinaa3 / 10) * 90;
+                DragonMaquinaa3 = sistema.MoverDragonMaquinaa3();
+                sistema.ColumnaDragonMaquinaa3 = (DragonMaquinaa3 % 10) * 90;
+                sistema.FilaDragonMaquinaa3 = (DragonMaquinaa3 / 10) * 90;
 
-            DragonAmarillo1.Visible = true;
-            DragonAmarillo2.Visible = true;
+                DragonAmarillo1.Visible = true;
+                DragonAmarillo2.Visible = true;
 
-            #endregion
+                #endregion
+            }
+
             dadoA.Visible = false;
             jugador = 3;
             pBdado.Visible = true;
@@ -328,6 +338,27 @@ namespace CalabozosYDragones_lab
 
         private void BtnMaquina3_Click(object sender, EventArgs e)
         {
+            if(comboBox1.SelectedIndex == 1)
+            {
+                #region DragonMaquina3
+                DragonMaquina4 = sistema.MoverDragonMaquina4();
+                sistema.ColumnaDragonMaquina4 = (DragonMaquina4 % 10) * 90;
+                sistema.FilaDragonMaquina4 = (DragonMaquina4 / 10) * 90;
+
+                #endregion
+
+                #region DragonMaquina3
+
+                DragonMaquinaa4 = sistema.MoverDragonMaquinaa4();
+                sistema.ColumnaDragonMaquinaa4 = (DragonMaquinaa4 % 10) * 90;
+                sistema.FilaDragonMaquinaa4 = (DragonMaquinaa4 / 10) * 90;
+
+                DragonVerde1.Visible = true;
+                DragonVerde2.Visible = true;
+
+                #endregion
+            }
+
             dadoA.Visible = false;
             jugador = 4;
             pBdado.Visible = true;
@@ -397,13 +428,24 @@ namespace CalabozosYDragones_lab
                         
                         if (posicionA >= 49)
                         {
+                            TxtNombre.Enabled = true;
+                            numericUpDown1.Enabled = true;
+                            comboBox1.Enabled = true;
+                            comboBox1.SelectedItem = null;
+                            BtnMaquina.Visible = false;
+                            BtnMaquina2.Visible = false;
+                            BtnMaquina3.Visible = false;
+                            BtnHumano.Enabled = false;
+                            CaballeroVerde.Visible = false;
+                            CaballeroRosa.Visible = false;
+                            CaballeroAzul.Visible = false;
+                            CaballeroAmarillo.Visible = false;
                             winnerRosa.NombreGanador.Text = TxtNombre.Text;
                             CaballeroRosa.Left = 15 + 300;
                             CaballeroRosa.Top = 5 + 300;
                             winnerRosa.ShowDialog();
                             c = 0;
                             f = 0;
-                           
                             posicionA = 0;
                             Iniciar();
                            
@@ -422,6 +464,18 @@ namespace CalabozosYDragones_lab
                         
                         if (posicionB >= 49)
                         {
+                            TxtNombre.Enabled = true;
+                            numericUpDown1.Enabled = true;
+                            comboBox1.Enabled = true;
+                            comboBox1.SelectedItem = null;
+                            BtnMaquina.Visible = false;
+                            BtnMaquina2.Visible = false;
+                            BtnMaquina3.Visible = false;
+                            BtnHumano.Enabled = false;
+                            CaballeroVerde.Visible = false;
+                            CaballeroAmarillo.Visible = false;
+                            CaballeroRosa.Visible = false;
+                            CaballeroAzul.Visible = false;
                             CaballeroAzul.Left = 15 + 300;
                             CaballeroAzul.Top = 38 + 300;
                             winnerAzul.ShowDialog();
@@ -446,6 +500,18 @@ namespace CalabozosYDragones_lab
 
                         if (posicionC >= 49)
                         {
+                            TxtNombre.Enabled = true;
+                            numericUpDown1.Enabled = true;
+                            comboBox1.Enabled = true;
+                            comboBox1.SelectedItem = null;
+                            BtnMaquina.Visible = false;
+                            BtnMaquina2.Visible = false;
+                            BtnMaquina3.Visible = false;
+                            BtnHumano.Enabled = false;
+                            CaballeroAmarillo.Visible = false;
+                            CaballeroAzul.Visible = false;
+                            CaballeroRosa.Visible = false;
+                            CaballeroVerde.Visible = false;
                             CaballeroAmarillo.Left = 15 + 300;
                             CaballeroAmarillo.Top = 5 + 300;
                             winnerAmarillo.ShowDialog();
@@ -460,15 +526,27 @@ namespace CalabozosYDragones_lab
                 case 4:
                     {
 
-                        //DragoncitoHumano2.Left = 55 + sistema.ColumnaDragon2;
-                        //DragoncitoHumano2.Top = 65 + sistema.FilaDragon2;
-                        //DragoncitoHumano1.Left = 55 + sistema.ColumnaDragon1;
-                        //DragoncitoHumano1.Top = 65 + sistema.FilaDragon1;
+                        DragonVerde2.Left = 55 + sistema.ColumnaDragonMaquinaa4;
+                        DragonVerde2.Top = 65 + sistema.FilaDragonMaquinaa4;
+                        DragonVerde1.Left = 55 + sistema.ColumnaDragonMaquina4;
+                        DragonVerde1.Top = 65 + sistema.FilaDragonMaquina4;
                         CaballeroVerde.Left = 55 + columnaMaquina3;
                         CaballeroVerde.Top = 65 + filaMaquina3;
 
                         if (posicionD >= 49)
                         {
+                            TxtNombre.Enabled = true;
+                            numericUpDown1.Enabled = true;
+                            comboBox1.Enabled = true;
+                            comboBox1.SelectedItem = null;
+                            BtnMaquina.Visible = false;
+                            BtnMaquina2.Visible = false;
+                            BtnMaquina3.Visible = false;
+                            BtnHumano.Enabled = false;
+                            CaballeroAzul.Visible = false;
+                            CaballeroRosa.Visible = false;
+                            CaballeroAmarillo.Visible = false;
+                            CaballeroVerde.Visible = false;
                             CaballeroVerde.Left = 15 + 300;
                             CaballeroVerde.Top = 5 + 300;
                             winnerVerde.ShowDialog();

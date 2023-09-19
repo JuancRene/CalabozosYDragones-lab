@@ -41,6 +41,8 @@ namespace CalabozosYDragones_lab
         public int NumeroRandom6 { get; set; }
         public int NumeroRandom7 { get; set; }
         public int NumeroRandom8 { get; set; }
+        public int NumeroRandom9 { get; set; }
+        public int NumeroRandom10 { get; set; }
         public int ColumnaDragonMaquina1 { get; set; }
         public int FilaDragonMaquina1 { get; set; }
         public int ColumnaDragonMaquina2 { get; set; }
@@ -49,6 +51,10 @@ namespace CalabozosYDragones_lab
         public int FilaDragonMaquina3 { get; set; }
         public int ColumnaDragonMaquinaa3 { get; set; }
         public int FilaDragonMaquinaa3 { get; set; }
+        public int ColumnaDragonMaquina4 { get; set; }
+        public int FilaDragonMaquina4 { get; set; }
+        public int ColumnaDragonMaquinaa4 { get; set; }
+        public int FilaDragonMaquinaa4 { get; set; }
 
 
 
@@ -144,6 +150,22 @@ namespace CalabozosYDragones_lab
             return NumeroRandom8;
 
         }
+        public int MoverDragonMaquinaa4()
+        {
+
+            NumeroRandom9 = RandomMaquinaTres.Next(1, 49);
+            return NumeroRandom9;
+
+        }
+        public int MoverDragonMaquina4()
+        {
+
+            Random MoverMaquina = new Random();
+            NumeroRandom10 = MoverMaquina.Next(1, 49);
+            return NumeroRandom10;
+
+        }
+
 
 
 
