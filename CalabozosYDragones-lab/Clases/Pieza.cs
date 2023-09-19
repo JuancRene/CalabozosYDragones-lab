@@ -12,12 +12,25 @@ namespace CalabozosYDragones_lab
 
         public int Posicion { get; protected set; }
 
+        Random posicionAzarDragones = new Random();
+
         public Pieza(int posicion)
         {
             Posicion = posicion;
             posicion = 0;
         }
 
+        public int PosicionInicialCaballeros()
+        {
+            return Posicion = 0;
+        }
+
+        public int PosicionesAleatoriasDragones()
+        {
+            int posicionD;
+            posicionD = posicionAzarDragones.Next(1, 49);
+            return posicionD;
+        }
 
     }
 }

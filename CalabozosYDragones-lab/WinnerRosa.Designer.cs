@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinnerRosa));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.NombreGanador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,21 +44,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // NombreGanador
+            // 
+            this.NombreGanador.AutoSize = true;
+            this.NombreGanador.BackColor = System.Drawing.SystemColors.ControlText;
+            this.NombreGanador.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreGanador.ForeColor = System.Drawing.Color.Cornsilk;
+            this.NombreGanador.Location = new System.Drawing.Point(12, 431);
+            this.NombreGanador.Name = "NombreGanador";
+            this.NombreGanador.Size = new System.Drawing.Size(0, 108);
+            this.NombreGanador.TabIndex = 1;
+            // 
             // WinnerRosa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 658);
+            this.Controls.Add(this.NombreGanador);
             this.Controls.Add(this.pictureBox1);
             this.Name = "WinnerRosa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WinnerRosa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label NombreGanador;
     }
 }

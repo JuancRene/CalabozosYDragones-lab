@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Linq.Expressions;
 
 namespace CalabozosYDragones_lab
 {
@@ -37,9 +38,23 @@ namespace CalabozosYDragones_lab
         public int FilaDragon2 { get; set; }
         public int NumeroRandom4 { get; set; }
         public int NumeroRandom5 { get; set; }
+        public int NumeroRandom6 { get; set; }
+        public int NumeroRandom7 { get; set; }
+        public int NumeroRandom8 { get; set; }
+        public int ColumnaDragonMaquina1 { get; set; }
+        public int FilaDragonMaquina1 { get; set; }
+        public int ColumnaDragonMaquina2 { get; set; }
+        public int FilaDragonMaquina2 { get; set; }
+        public int ColumnaDragonMaquina3 { get; set; }
+        public int FilaDragonMaquina3 { get; set; }
+        public int ColumnaDragonMaquinaa3 { get; set; }
+        public int FilaDragonMaquinaa3 { get; set; }
+
 
 
         Random NumeroAleatorio = new Random();
+        Random NumeroRandomMaquina = new Random();
+        Random RandomMaquinaTres = new Random();
         string Nombre { get; set; }
 
         Jugador j;
@@ -99,16 +114,39 @@ namespace CalabozosYDragones_lab
             return NumeroRandom2;
         }
 
-        //public int MoverDragonMaquina()
-        //{
-            
-        //    Random NumeroAleatorio = new Random();
-        //    NumeroRandom2 = NumeroAleatorio.Next(1, 49);
-        //    return NumeroRandom2;
+        public int MoverDragonMaquina()
+        {
+           
+            NumeroRandom6 = NumeroRandomMaquina.Next(1, 49);
+            return NumeroRandom6;
                 
-        //}
+        }
+        public int MoverDragonMaquina2()
+        {
 
-        
+            Random NumeroAleatorio2 = new Random();
+            NumeroRandom7 = NumeroAleatorio2.Next(1, 49);
+            return NumeroRandom7;
+
+        }
+        public int MoverDragonMaquina3()
+        {
+
+            Random RandomMaquina3 = new Random();
+            NumeroRandom8 = RandomMaquina3.Next(1, 49);
+            return NumeroRandom8;
+
+        }
+        public int MoverDragonMaquinaa3()
+        {
+
+            NumeroRandom8 = RandomMaquinaTres.Next(1, 49);
+            return NumeroRandom8;
+
+        }
+
+
+
 
     }
 }
