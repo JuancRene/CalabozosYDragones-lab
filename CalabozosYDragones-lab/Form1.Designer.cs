@@ -36,8 +36,6 @@
             this.DragoncitoHumano1 = new System.Windows.Forms.Panel();
             this.DragoncitoHumano2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.BtnHumano = new System.Windows.Forms.Button();
-            this.BtnMaquina = new System.Windows.Forms.Button();
             this.pBdado = new System.Windows.Forms.PictureBox();
             this.dadoA = new System.Windows.Forms.Label();
             this.dadoR = new System.Windows.Forms.Label();
@@ -53,8 +51,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.CaballeroVerde = new System.Windows.Forms.Panel();
             this.CaballeroAmarillo = new System.Windows.Forms.Panel();
-            this.BtnMaquina2 = new System.Windows.Forms.Button();
-            this.BtnMaquina3 = new System.Windows.Forms.Button();
             this.DragonAmarillo1 = new System.Windows.Forms.Panel();
             this.DragonAmarillo2 = new System.Windows.Forms.Panel();
             this.DragonAzul1 = new System.Windows.Forms.Panel();
@@ -124,26 +120,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // BtnHumano
-            // 
-            this.BtnHumano.Location = new System.Drawing.Point(970, 221);
-            this.BtnHumano.Name = "BtnHumano";
-            this.BtnHumano.Size = new System.Drawing.Size(103, 88);
-            this.BtnHumano.TabIndex = 5;
-            this.BtnHumano.Text = "Humano";
-            this.BtnHumano.UseVisualStyleBackColor = true;
-            this.BtnHumano.Click += new System.EventHandler(this.BtnHumano_Click_1);
-            // 
-            // BtnMaquina
-            // 
-            this.BtnMaquina.Location = new System.Drawing.Point(1087, 221);
-            this.BtnMaquina.Name = "BtnMaquina";
-            this.BtnMaquina.Size = new System.Drawing.Size(107, 88);
-            this.BtnMaquina.TabIndex = 6;
-            this.BtnMaquina.Text = "Maquina 1";
-            this.BtnMaquina.UseVisualStyleBackColor = true;
-            this.BtnMaquina.Click += new System.EventHandler(this.BtnMaquina_Click);
             // 
             // pBdado
             // 
@@ -264,7 +240,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.FlatAppearance.BorderSize = 1200;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(994, 147);
+            this.button1.Location = new System.Drawing.Point(996, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 68);
             this.button1.TabIndex = 18;
@@ -287,26 +263,6 @@
             this.CaballeroAmarillo.Name = "CaballeroAmarillo";
             this.CaballeroAmarillo.Size = new System.Drawing.Size(46, 63);
             this.CaballeroAmarillo.TabIndex = 3;
-            // 
-            // BtnMaquina2
-            // 
-            this.BtnMaquina2.Location = new System.Drawing.Point(970, 328);
-            this.BtnMaquina2.Name = "BtnMaquina2";
-            this.BtnMaquina2.Size = new System.Drawing.Size(107, 88);
-            this.BtnMaquina2.TabIndex = 19;
-            this.BtnMaquina2.Text = "Maquina 2";
-            this.BtnMaquina2.UseVisualStyleBackColor = true;
-            this.BtnMaquina2.Click += new System.EventHandler(this.BtnMaquina2_Click);
-            // 
-            // BtnMaquina3
-            // 
-            this.BtnMaquina3.Location = new System.Drawing.Point(1087, 328);
-            this.BtnMaquina3.Name = "BtnMaquina3";
-            this.BtnMaquina3.Size = new System.Drawing.Size(107, 88);
-            this.BtnMaquina3.TabIndex = 20;
-            this.BtnMaquina3.Text = "Maquina 3";
-            this.BtnMaquina3.UseVisualStyleBackColor = true;
-            this.BtnMaquina3.Click += new System.EventHandler(this.BtnMaquina3_Click);
             // 
             // DragonAmarillo1
             // 
@@ -390,8 +346,6 @@
             this.Controls.Add(this.DragonAzul1);
             this.Controls.Add(this.DragonAmarillo2);
             this.Controls.Add(this.DragonAmarillo1);
-            this.Controls.Add(this.BtnMaquina3);
-            this.Controls.Add(this.BtnMaquina2);
             this.Controls.Add(this.CaballeroAmarillo);
             this.Controls.Add(this.CaballeroVerde);
             this.Controls.Add(this.button1);
@@ -408,8 +362,6 @@
             this.Controls.Add(this.pBdado);
             this.Controls.Add(this.dadoR);
             this.Controls.Add(this.dadoA);
-            this.Controls.Add(this.BtnMaquina);
-            this.Controls.Add(this.BtnHumano);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -431,8 +383,6 @@
         private System.Windows.Forms.Panel DragoncitoHumano2;
         public System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button BtnHumano;
-        private System.Windows.Forms.Button BtnMaquina;
         private System.Windows.Forms.PictureBox pBdado;
         private System.Windows.Forms.Label dadoA;
         private System.Windows.Forms.Label dadoR;
@@ -448,8 +398,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel CaballeroVerde;
         private System.Windows.Forms.Panel CaballeroAmarillo;
-        private System.Windows.Forms.Button BtnMaquina2;
-        private System.Windows.Forms.Button BtnMaquina3;
         private System.Windows.Forms.Panel DragonAmarillo1;
         private System.Windows.Forms.Panel DragonAmarillo2;
         private System.Windows.Forms.Panel DragonAzul1;

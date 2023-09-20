@@ -128,8 +128,6 @@ namespace CalabozosYDragones_lab
             //pantallaCarga.ShowDialog();
 
             #region Desvisualizacion de botones
-            BtnHumano.Enabled = false;
-            BtnMaquina.Enabled = false;
             Calabozo1.Visible = false;
             Calabozo2.Visible = false;
             Calabozo3.Visible = false;
@@ -139,9 +137,6 @@ namespace CalabozosYDragones_lab
             CaballeroAzul.Visible = false;
             CaballeroRosa.Visible = false;
             CaballeroVerde.Visible = false;
-            BtnMaquina.Visible = false;
-            BtnMaquina2.Visible = false;
-            BtnMaquina3.Visible = false;
             DragonAzul1.Visible = false;
             DragonAzul2.Visible = false;
             DragonAmarillo1.Visible = false;
@@ -250,6 +245,7 @@ namespace CalabozosYDragones_lab
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
             if(comboBox1.SelectedItem != null)
             {
                 decimal NroDeJugadores;
@@ -258,14 +254,11 @@ namespace CalabozosYDragones_lab
                 if (NroDeJugadores == 1)
                 {
                     CaballeroAzul.Visible = true;
-                    BtnMaquina.Visible = true;
                 }
                 if (NroDeJugadores == 2)
                 {
                     CaballeroAmarillo.Visible = true;
                     CaballeroAzul.Visible = true;
-                    BtnMaquina2.Visible = true;
-                    BtnMaquina.Visible = true;
 
                 }
                 if (NroDeJugadores == 3)
@@ -275,15 +268,10 @@ namespace CalabozosYDragones_lab
                     CaballeroVerde.Visible = true;
                     CaballeroAmarillo.Visible = true;
                     CaballeroVerde.Visible = true;
-                    BtnMaquina2.Visible = true;
-                    BtnMaquina.Visible = true;
-                    BtnMaquina3.Visible = true;
 
                 }
                 numericUpDown1.Enabled = false;
 
-                BtnHumano.Enabled = true;
-                BtnMaquina.Enabled = true;
                 TxtNombre.Enabled = false;
 
             }
@@ -340,14 +328,14 @@ namespace CalabozosYDragones_lab
         {
             if(comboBox1.SelectedIndex == 1)
             {
-                #region DragonMaquina3
+                #region DragonMaquina4
                 DragonMaquina4 = sistema.MoverDragonMaquina4();
                 sistema.ColumnaDragonMaquina4 = (DragonMaquina4 % 10) * 90;
                 sistema.FilaDragonMaquina4 = (DragonMaquina4 / 10) * 90;
 
                 #endregion
 
-                #region DragonMaquina3
+                #region DragonMaquina4
 
                 DragonMaquinaa4 = sistema.MoverDragonMaquinaa4();
                 sistema.ColumnaDragonMaquinaa4 = (DragonMaquinaa4 % 10) * 90;
@@ -432,10 +420,6 @@ namespace CalabozosYDragones_lab
                             numericUpDown1.Enabled = true;
                             comboBox1.Enabled = true;
                             comboBox1.SelectedItem = null;
-                            BtnMaquina.Visible = false;
-                            BtnMaquina2.Visible = false;
-                            BtnMaquina3.Visible = false;
-                            BtnHumano.Enabled = false;
                             CaballeroVerde.Visible = false;
                             CaballeroRosa.Visible = false;
                             CaballeroAzul.Visible = false;
@@ -468,10 +452,6 @@ namespace CalabozosYDragones_lab
                             numericUpDown1.Enabled = true;
                             comboBox1.Enabled = true;
                             comboBox1.SelectedItem = null;
-                            BtnMaquina.Visible = false;
-                            BtnMaquina2.Visible = false;
-                            BtnMaquina3.Visible = false;
-                            BtnHumano.Enabled = false;
                             CaballeroVerde.Visible = false;
                             CaballeroAmarillo.Visible = false;
                             CaballeroRosa.Visible = false;
@@ -504,10 +484,6 @@ namespace CalabozosYDragones_lab
                             numericUpDown1.Enabled = true;
                             comboBox1.Enabled = true;
                             comboBox1.SelectedItem = null;
-                            BtnMaquina.Visible = false;
-                            BtnMaquina2.Visible = false;
-                            BtnMaquina3.Visible = false;
-                            BtnHumano.Enabled = false;
                             CaballeroAmarillo.Visible = false;
                             CaballeroAzul.Visible = false;
                             CaballeroRosa.Visible = false;
@@ -539,10 +515,6 @@ namespace CalabozosYDragones_lab
                             numericUpDown1.Enabled = true;
                             comboBox1.Enabled = true;
                             comboBox1.SelectedItem = null;
-                            BtnMaquina.Visible = false;
-                            BtnMaquina2.Visible = false;
-                            BtnMaquina3.Visible = false;
-                            BtnHumano.Enabled = false;
                             CaballeroAzul.Visible = false;
                             CaballeroRosa.Visible = false;
                             CaballeroAmarillo.Visible = false;
