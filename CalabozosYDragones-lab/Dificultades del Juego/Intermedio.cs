@@ -46,38 +46,5 @@ namespace CalabozosYDragones_lab.Clases
 
         }
 
-        
-
-        public int RetrocesoDragon1()
-        {
-            if (posicionB == dragones.DragonVirtual1)
-            {
-                posicionB = base.Posicion;
-                posicionB -= 5;
-                columnaMaquina = (posicionB % 10) * 90;
-                filaMaquina = (posicionB / 10) * 90;
-                MessageBox.Show("Retrocede 5 lugares");
-                
-            }
-            return posicionB;
-        }
-
-        public int RetrocesoDragon2()
-        {
-            if (posicionB == dragones.DragonVirtual1)
-            {
-                posicionB = base.Posicion;
-                posicionB -= 5;
-                columnaMaquina = (posicionB % 10) * 90;
-                filaMaquina = (posicionB / 10) * 90;
-                MessageBox.Show("Retrocede 5 lugares");
-
-            }
-            return posicionB;
-        }
-
-
-
-
     }
 }

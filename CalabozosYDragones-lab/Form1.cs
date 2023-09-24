@@ -113,7 +113,7 @@ namespace CalabozosYDragones_lab
 
         private void Iniciar()
         {
-            caballero.PosicionInicialH(CaballeroRosado);
+            caballero.PosicionInicialH(CaballeroRosa);
             caballero.PosicionInicialV1(CaballeroAzul);
             
             //dragones.PosicionInicialDH(DragoncitoHumano1);
@@ -130,7 +130,7 @@ namespace CalabozosYDragones_lab
             DragoncitoHumano2.Visible = false;
             CaballeroAmarillo.Visible = false;
             CaballeroAzul.Visible = false;
-            CaballeroRojo.Visible = false;
+            CaballeroRosa.Visible = false;
             CaballeroVerde.Visible = false;
 
             
@@ -246,11 +246,11 @@ namespace CalabozosYDragones_lab
 
             if (comboBox1.SelectedIndex == 0)
             {
-                CaballeroRojo.Visible = true;
+                CaballeroRosa.Visible = true;
                 comboBox1.Enabled = false;
             }
             
-                if (comboBox1.SelectedIndex == 1)
+             if (comboBox1.SelectedIndex == 1)
             {
                 dragones.PosicionInicialDH1(DragoncitoHumano1);
                 dragones.PosicionInicialDH2(DragoncitoHumano1);
@@ -297,13 +297,13 @@ namespace CalabozosYDragones_lab
                         DragoncitoHumano2.Top = 65 + sistema.FilaDragon2;
                         DragoncitoHumano1.Left = 55 + sistema.ColumnaDragon1;
                         DragoncitoHumano1.Top = 65 + sistema.FilaDragon1;
-                        CaballeroRosado.Left = 55 + c;
-                        CaballeroRosado.Top = 65 + f;
+                        CaballeroRosa.Left = 55 + c;
+                        CaballeroRosa.Top = 65 + f;
                         
                         if (posicionA >= 49)
                         {
-                            CaballeroRosado.Left = 15 + 300;
-                            CaballeroRosado.Top = 5 + 300;
+                            CaballeroRosa.Left = 15 + 300;
+                            CaballeroRosa.Top = 5 + 300;
                             MessageBox.Show("GANO EL CABALLERO ROJO");
                             c = 0;
                             f = 0;
