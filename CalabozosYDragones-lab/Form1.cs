@@ -23,7 +23,8 @@ namespace CalabozosYDragones_lab
         GameOver game = new GameOver();
         Sistema sistema = new Sistema();
         Intermedio intermedio;
-
+        Experto experto;
+        Calabozo calabozo = new Calabozo(Hola);
         Caballero caballero =  new Caballero(Hola);
         Dragones dragones = new Dragones(Hola);
         Pieza pieza;
@@ -40,6 +41,8 @@ namespace CalabozosYDragones_lab
         int filaDragon1 =0;
         int DragonHumano = 0;
         int DragonHumano2 = 0;
+        int ColumnaCala = 0;
+        int FilaCala = 0;
         
         
         public Form1()
@@ -142,7 +145,6 @@ namespace CalabozosYDragones_lab
         {
             GameOver FinDelJuego = new GameOver(3);
             FinDelJuego.ShowDialog();
-            
         }
         
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -175,7 +177,7 @@ namespace CalabozosYDragones_lab
         {
 
         }
-
+        int cont = 0;
         private void button1_Click_1(object sender, EventArgs e)
         {
             //intermedio = new Intermedio(dragones.Posicion, Convert.ToInt32(numericUpDown1.Value));
@@ -189,6 +191,7 @@ namespace CalabozosYDragones_lab
             c = (posicionA % 10) * 90;
             f = (posicionA / 10) * 90;
             dadoA.Text = caballero.Numero.ToString();
+            
 
             if (comboBox1.SelectedIndex == 1)
             {
@@ -208,7 +211,20 @@ namespace CalabozosYDragones_lab
                 #endregion
 
             }
+            
+            if (comboBox1.SelectedIndex == 2 && cont ==0)
+            {
+              
+                
+                calabozo.PosicionCala(Calabozo1);
+                calabozo.PosicionCala(Calabozo2);
+                calabozo.PosicionCala(Calabozo3);
+                Calabozo2.Visible = true;
+                Calabozo1.Visible = true;
+                Calabozo3.Visible = true;
 
+            }
+            cont = 1;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -233,26 +249,34 @@ namespace CalabozosYDragones_lab
             if (comboBox1.SelectedIndex == 0)
             {
                 CaballeroRosa.Visible = true;
-                comboBox1.Enabled = false;
             }
             
              if (comboBox1.SelectedIndex == 1)
              {
                 dragones = new Dragones(DragonRosa1);
                 dragones = new Dragones(DragonRosa2);
-
-                //dragones = new Dragones(DragonAzul1);
-                //dragones = new Dragones(DragonAzul2);
                 dragones.PosicionInicialDragones(DragonRosa1);
-                dragones.PosicionInicialDragones(DragonRosa2);
-                //dragones.PosicionInicialDragones(DragonAzul1);
-                //dragones.PosicionInicialDragones(DragonAzul2);
-
+                dragones.PosicionInicialDragones(DragonRosa2); 
                 DragonRosa1.Visible = true;
                 DragonRosa2.Visible = true;
+                if (numericUpDown1.Value == 2) 
+                {   dragones = new Dragones(DragonAzul1);
+                    dragones = new Dragones(DragonAzul2);
+                    dragones.PosicionInicialDragones(DragonAzul1);
+                    dragones.PosicionInicialDragones(DragonAzul2);
+                    DragonAzul1.Visible = true;
+                    DragonAzul2.Visible= true;
+                }
+                
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                calabozo.PosicionInicialCala(Calabozo1);
+                calabozo.PosicionInicialCala(Calabozo2);
+                calabozo.PosicionInicialCala(Calabozo3);
+
 
             }
-            
         }
 
         private void dadoA_VisibleChanged(object sender, EventArgs e)
