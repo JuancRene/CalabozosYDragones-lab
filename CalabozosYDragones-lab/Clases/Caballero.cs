@@ -24,8 +24,7 @@ namespace CalabozosYDragones_lab
             
         }
 
-        public 
-        
+                
 
     }
 
