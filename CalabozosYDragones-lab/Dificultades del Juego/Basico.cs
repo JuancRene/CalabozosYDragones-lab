@@ -9,33 +9,17 @@ namespace CalabozosYDragones_lab
 {
     internal class Basico
     {
+
         Random dado = new Random();
         Caballero caballero = new Caballero(0);
         public int Posicion { get; set; }
-        public Basico(int posicion)
+        int cantidadJugadores = 0;
+        public Basico(int posicion,int cantidadJugadores)
         {
             Posicion = posicion;
-
-        }
-
-        //public int Jugar()
-        //{
-
-            
-        //}
-
-        public int MoverCaballeroHumano()
-        {
-            int posicionC = dado.Next(1, 6);
-            return posicionC;
-        }
-
-        public int MoverCaballerosVirtuales()
-        {
-
-            int posicionV = dado.Next(1, 6);
-            return posicionV;
-
+            this.cantidadJugadores = cantidadJugadores;
+            caballero = new Caballero(posicion);
+             
         }
 
     }

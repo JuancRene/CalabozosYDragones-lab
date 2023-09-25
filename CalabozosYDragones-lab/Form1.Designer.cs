@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.BtnHumano = new System.Windows.Forms.Button();
-            this.BtnMaquina = new System.Windows.Forms.Button();
             this.pBdado = new System.Windows.Forms.PictureBox();
             this.dadoA = new System.Windows.Forms.Label();
             this.dadoR = new System.Windows.Forms.Label();
@@ -52,8 +50,8 @@
             this.DragonAmarillo1 = new System.Windows.Forms.Panel();
             this.CaballeroAmarillo = new System.Windows.Forms.Panel();
             this.CaballeroVerde = new System.Windows.Forms.Panel();
-            this.DragoncitoHumano2 = new System.Windows.Forms.Panel();
-            this.DragoncitoHumano1 = new System.Windows.Forms.Panel();
+            this.DragonRosa2 = new System.Windows.Forms.Panel();
+            this.DragonRosa1 = new System.Windows.Forms.Panel();
             this.Calabozo1 = new System.Windows.Forms.Panel();
             this.Calabozo3 = new System.Windows.Forms.Panel();
             this.Calabozo2 = new System.Windows.Forms.Panel();
@@ -74,7 +72,7 @@
             "Basico",
             "Intermedio",
             "Experto"});
-            this.comboBox1.Location = new System.Drawing.Point(1071, 7);
+            this.comboBox1.Location = new System.Drawing.Point(1071, 83);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(136, 28);
             this.comboBox1.TabIndex = 0;
@@ -84,26 +82,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // BtnHumano
-            // 
-            this.BtnHumano.Location = new System.Drawing.Point(970, 221);
-            this.BtnHumano.Name = "BtnHumano";
-            this.BtnHumano.Size = new System.Drawing.Size(103, 88);
-            this.BtnHumano.TabIndex = 5;
-            this.BtnHumano.Text = "Humano";
-            this.BtnHumano.UseVisualStyleBackColor = true;
-            this.BtnHumano.Click += new System.EventHandler(this.BtnHumano_Click_1);
-            // 
-            // BtnMaquina
-            // 
-            this.BtnMaquina.Location = new System.Drawing.Point(1087, 221);
-            this.BtnMaquina.Name = "BtnMaquina";
-            this.BtnMaquina.Size = new System.Drawing.Size(107, 88);
-            this.BtnMaquina.TabIndex = 6;
-            this.BtnMaquina.Text = "Maquina";
-            this.BtnMaquina.UseVisualStyleBackColor = true;
-            this.BtnMaquina.Click += new System.EventHandler(this.BtnMaquina_Click);
             // 
             // pBdado
             // 
@@ -151,7 +129,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(940, 10);
+            this.label1.Location = new System.Drawing.Point(940, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 15;
@@ -161,7 +139,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(934, 69);
+            this.label2.Location = new System.Drawing.Point(934, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 16;
@@ -172,7 +150,7 @@
             this.numericUpDown1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.numericUpDown1.Font = new System.Drawing.Font("MV Boli", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown1.Location = new System.Drawing.Point(1071, 63);
+            this.numericUpDown1.Location = new System.Drawing.Point(1071, 136);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             3,
             0,
@@ -200,7 +178,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.FlatAppearance.BorderSize = 1200;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(992, 124);
+            this.button1.Location = new System.Drawing.Point(996, 197);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 68);
             this.button1.TabIndex = 18;
@@ -247,6 +225,7 @@
             this.DragonAmarillo2.Name = "DragonAmarillo2";
             this.DragonAmarillo2.Size = new System.Drawing.Size(47, 69);
             this.DragonAmarillo2.TabIndex = 27;
+            this.DragonAmarillo2.Paint += new System.Windows.Forms.PaintEventHandler(this.DragonAmarillo2_Paint);
             // 
             // DragonAmarillo1
             // 
@@ -272,21 +251,21 @@
             this.CaballeroVerde.Size = new System.Drawing.Size(46, 63);
             this.CaballeroVerde.TabIndex = 22;
             // 
-            // DragoncitoHumano2
+            // DragonRosa2
             // 
-            this.DragoncitoHumano2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragoncitoHumano2.BackgroundImage")));
-            this.DragoncitoHumano2.Location = new System.Drawing.Point(877, 577);
-            this.DragoncitoHumano2.Name = "DragoncitoHumano2";
-            this.DragoncitoHumano2.Size = new System.Drawing.Size(47, 69);
-            this.DragoncitoHumano2.TabIndex = 25;
+            this.DragonRosa2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonRosa2.BackgroundImage")));
+            this.DragonRosa2.Location = new System.Drawing.Point(877, 577);
+            this.DragonRosa2.Name = "DragonRosa2";
+            this.DragonRosa2.Size = new System.Drawing.Size(47, 69);
+            this.DragonRosa2.TabIndex = 25;
             // 
-            // DragoncitoHumano1
+            // DragonRosa1
             // 
-            this.DragoncitoHumano1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragoncitoHumano1.BackgroundImage")));
-            this.DragoncitoHumano1.Location = new System.Drawing.Point(800, 577);
-            this.DragoncitoHumano1.Name = "DragoncitoHumano1";
-            this.DragoncitoHumano1.Size = new System.Drawing.Size(47, 69);
-            this.DragoncitoHumano1.TabIndex = 23;
+            this.DragonRosa1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DragonRosa1.BackgroundImage")));
+            this.DragonRosa1.Location = new System.Drawing.Point(800, 577);
+            this.DragonRosa1.Name = "DragonRosa1";
+            this.DragonRosa1.Size = new System.Drawing.Size(47, 69);
+            this.DragonRosa1.TabIndex = 23;
             // 
             // Calabozo1
             // 
@@ -333,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1263, 658);
+            this.ClientSize = new System.Drawing.Size(1263, 685);
             this.Controls.Add(this.DragonVerde2);
             this.Controls.Add(this.DragonVerde1);
             this.Controls.Add(this.DragonAzul2);
@@ -342,8 +321,8 @@
             this.Controls.Add(this.DragonAmarillo1);
             this.Controls.Add(this.CaballeroAmarillo);
             this.Controls.Add(this.CaballeroVerde);
-            this.Controls.Add(this.DragoncitoHumano2);
-            this.Controls.Add(this.DragoncitoHumano1);
+            this.Controls.Add(this.DragonRosa2);
+            this.Controls.Add(this.DragonRosa1);
             this.Controls.Add(this.Calabozo1);
             this.Controls.Add(this.Calabozo3);
             this.Controls.Add(this.Calabozo2);
@@ -356,8 +335,6 @@
             this.Controls.Add(this.pBdado);
             this.Controls.Add(this.dadoR);
             this.Controls.Add(this.dadoA);
-            this.Controls.Add(this.BtnMaquina);
-            this.Controls.Add(this.BtnHumano);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -375,8 +352,6 @@
         #endregion
         public System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button BtnHumano;
-        private System.Windows.Forms.Button BtnMaquina;
         private System.Windows.Forms.PictureBox pBdado;
         private System.Windows.Forms.Label dadoA;
         private System.Windows.Forms.Label dadoR;
@@ -395,8 +370,8 @@
         private System.Windows.Forms.Panel DragonAmarillo1;
         private System.Windows.Forms.Panel CaballeroAmarillo;
         private System.Windows.Forms.Panel CaballeroVerde;
-        private System.Windows.Forms.Panel DragoncitoHumano2;
-        private System.Windows.Forms.Panel DragoncitoHumano1;
+        private System.Windows.Forms.Panel DragonRosa2;
+        private System.Windows.Forms.Panel DragonRosa1;
         private System.Windows.Forms.Panel Calabozo1;
         private System.Windows.Forms.Panel Calabozo3;
         private System.Windows.Forms.Panel Calabozo2;

@@ -9,42 +9,29 @@ namespace CalabozosYDragones_lab.Clases
 {
     internal class Intermedio:Basico
     {
-        Dragones dragones = new Dragones(0);
-        
+
+        Dragones[] dragones = new Dragones[8];  
+        int contador = 0;
        
         int posicionA = 0;
         int posicionB = 0;
         int c, f, columnaMaquina, filaMaquina;
 
-        public Intermedio( int posicion) : base(posicion)
+        public Intermedio( int posicion, int cantidadJugadores) : base(posicion,cantidadJugadores)
         {
-            
-           
+            int cantDragones = cantidadJugadores * 2;
+            for (int i = 0; i < cantDragones; i++)
+            {
+                dragones[i] = new Dragones(posicion);
+            }
+
         }
 
-        public int AvanceDragon1()
+        public void CrearDragon(Dragones nuevoDragon)
         {
-                posicionA = base.Posicion;
-                posicionA += 5;
-                c = (posicionA % 10) * 90;
-                f = (posicionA / 10) * 90;
-                MessageBox.Show("Aumenta 5 lugares");
-                return posicionA;
-                
-              
+            dragones[contador++] = nuevoDragon;
         }
-        public int AvanceDragon2()
-        {
 
-            posicionA = base.Posicion;
-            posicionA += 5;
-            c = (posicionA % 10) * 90;
-            f = (posicionA / 10) * 90;
-            MessageBox.Show("Aumenta 5 lugares");
-            return posicionA;
-
-
-        }
 
     }
 }
