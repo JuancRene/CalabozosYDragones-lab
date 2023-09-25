@@ -17,6 +17,7 @@ namespace CalabozosYDragones_lab
         }
 
         Random Movilizar = new Random();
+        public int Numero {  get; set; }
         public void PosicionInicialCaballero(Panel caballeros)
         {
             caballeros.Left = 35;
@@ -26,7 +27,8 @@ namespace CalabozosYDragones_lab
 
         public int Mover()
         {
-            return Movilizar.Next(1,49);
+            Numero = Movilizar.Next(1,6);
+            return Numero;
         }
 
     }

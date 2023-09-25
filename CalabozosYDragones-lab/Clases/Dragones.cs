@@ -11,7 +11,10 @@ namespace CalabozosYDragones_lab
     internal class Dragones : Pieza
     {
         
-
+        public int Numero {get; set; }
+        public int FilaDragon { get; set; }
+        public int ColumnaDragon { get; set; }
+        Random moverDragones = new Random();
         public Dragones(Panel posicion): base(posicion) 
         { 
            base.Posicion = posicion;
@@ -23,6 +26,12 @@ namespace CalabozosYDragones_lab
             
             dragonH1.Left = 35;
             dragonH1.Top = 50;
+        }
+
+        public int MoverDragon()
+        {
+            Numero = moverDragones.Next(1,49);
+            return Numero;
         }
 
     }

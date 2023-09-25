@@ -25,7 +25,7 @@ namespace CalabozosYDragones_lab
         Intermedio intermedio;
 
         Caballero caballero =  new Caballero(Hola);
-        Dragones dragones;
+        Dragones dragones = new Dragones(Hola);
         Pieza pieza;
         int a = 0, c, f;
         int posicionA = 0, posicionB = 0;
@@ -40,7 +40,7 @@ namespace CalabozosYDragones_lab
         int filaDragon1 =0;
         int DragonHumano = 0;
         int DragonHumano2 = 0;
-        bool mostarLista = false;
+        
         
         public Form1()
         {
@@ -58,15 +58,7 @@ namespace CalabozosYDragones_lab
             
 
 
-            dadoA.Visible = false;
-            jugador = 1;
-            pBdado.Visible = true;
-            timer1.Stop();
-            timer1.Start();
-            posicionA += caballero.Mover();
-            c = (posicionA % 10) * 90;
-            f = (posicionA / 10) * 90;
-            dadoA.Text = sistema.Posicion.ToString();
+            
             
             //posicionA = intermedio.RetrocesoDragon1();
 
@@ -186,47 +178,36 @@ namespace CalabozosYDragones_lab
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //intermedio = new Intermedio(dragones.Posicion, Convert.ToInt32(numericUpDown1.Value));
 
-            if(comboBox1.SelectedIndex == 1)
+            dadoA.Visible = false;
+            jugador = 1;
+            pBdado.Visible = true;
+            timer1.Stop();
+            timer1.Start();
+            posicionA += caballero.Mover();
+            c = (posicionA % 10) * 90;
+            f = (posicionA / 10) * 90;
+            dadoA.Text = caballero.Numero.ToString();
+
+            if (comboBox1.SelectedIndex == 1)
             {
-                //#region Dragon1
-                //dragones.PosicionInicialDragones(DragonRosa1);
-                //sistema.ColumnaDragon1 = (DragonHumano % 10) * 90;
-                //sistema.FilaDragon1 = (DragonHumano / 10) * 90;
 
-                //#endregion
+                DragonHumano = dragones.MoverDragon();
+                #region DragoRosa
+                dragones.ColumnaDragon = (DragonHumano % 10) * 90;
+                dragones.FilaDragon = (DragonHumano / 10) * 90;
 
-                //#region Dragon2
+                #endregion
 
-                //dragones.PosicionInicialDragones(DragonRosa2);
-                //sistema.ColumnaDragon2 = (DragonHumano2 % 10) * 90;
-                //sistema.FilaDragon2 = (DragonHumano2 / 10) * 90;
+                #region DragonRosa
+                DragonHumano = dragones.MoverDragon();
+                dragones.ColumnaDragon = (DragonHumano % 10) * 90;
+                dragones.FilaDragon = (DragonHumano / 10) * 90;
 
-                //DragonRosa1.Visible = true;
-                //DragonRosa2.Visible = true;
-
-
-                //#endregion
-                
-                intermedio = new Intermedio(dragones.Posicion, Convert.ToInt32(numericUpDown1.Value));
-
+                #endregion
 
             }
-
-            //decimal NroDeJugadores;
-            //NroDeJugadores = numericUpDown1.Value;
-
-            //if(NroDeJugadores == 1)
-            //{
-            //    CaballeroAzul.Visible = true;
-            //}
-            //if(NroDeJugadores == 2)
-            //{
-
-            //}
-
-            //BtnHumano.Enabled = true;
-            //BtnMaquina.Enabled = true;
 
         }
 
@@ -259,6 +240,7 @@ namespace CalabozosYDragones_lab
              {
                 dragones = new Dragones(DragonRosa1);
                 dragones = new Dragones(DragonRosa2);
+
                 //dragones = new Dragones(DragonAzul1);
                 //dragones = new Dragones(DragonAzul2);
                 dragones.PosicionInicialDragones(DragonRosa1);
@@ -280,10 +262,10 @@ namespace CalabozosYDragones_lab
                 case 1:
                     {
 
-                        DragonRosa2.Left = 55 + sistema.ColumnaDragon2;
-                        DragonRosa2.Top = 65 + sistema.FilaDragon2;
-                        DragonRosa1.Left = 55 + sistema.ColumnaDragon1;
-                        DragonRosa1.Top = 65 + sistema.FilaDragon1;
+                        DragonRosa2.Left = 55 + dragones.ColumnaDragon;
+                        DragonRosa2.Top = 65 + dragones.FilaDragon;
+                        DragonRosa1.Left = 55 + dragones.ColumnaDragon;
+                        DragonRosa1.Top = 65 + dragones.FilaDragon;
                         CaballeroRosa.Left = 55 + c;
                         CaballeroRosa.Top = 65 + f;
                         

@@ -11,7 +11,6 @@ namespace CalabozosYDragones_lab.Clases
     {
         public int Calabozo1 { get; set; }
         public int Calabozo2 { get; set; }
-
         public int Calabozo3 { get; set; }
 
         public Calabozo(int posicion) 

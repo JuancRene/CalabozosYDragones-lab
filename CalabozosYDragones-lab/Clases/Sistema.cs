@@ -16,23 +16,10 @@ namespace CalabozosYDragones_lab
 
         Random LugarRandom = new Random();
         string[] jugador = new string[1];
-        
-        
         int contador = 0;
-
-        
-        public int ColumnaDragon1 { get ; set; }
         public int Posicion { get; set; }
-
-        public int FilaDragon1 { get; set; }
-        public int NumeroRandom1 { get; set; }
-        public int NumeroRandom2 { get; set; }
-        public int ColumnaDragon2 { get; set; }
-        public int FilaDragon2 { get; set; }
-
         string Nombre { get; set; }
-
-        Jugador j;
+            
         public Sistema()
         {
 
@@ -47,8 +34,6 @@ namespace CalabozosYDragones_lab
         {
             jugador[contador++] = nombre;   
         }
-
-        
 
         public override string ToString()
         {
