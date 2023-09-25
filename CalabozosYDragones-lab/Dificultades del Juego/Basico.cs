@@ -11,10 +11,10 @@ namespace CalabozosYDragones_lab
     {
 
         Random dado = new Random();
-        Caballero caballero = new Caballero(0);
-        public int Posicion { get; set; }
+        Caballero caballero;
+        public Panel Posicion { get; set; }
         int cantidadJugadores = 0;
-        public Basico(int posicion,int cantidadJugadores)
+        public Basico(Panel posicion,int cantidadJugadores)
         {
             Posicion = posicion;
             this.cantidadJugadores = cantidadJugadores;
